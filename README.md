@@ -1,3 +1,26 @@
+```sh
+ mkdir 06-creating-production-workflow
+ cd 06-creating-production-workflow/
+ npx create-react-app frontend
+ cd frontend/
+ npm run test
+ npm run build
+ npm run start
+
+ rm -rf node_modules
+ docker build -f Dockerfile.dev .
+ docker run <id>
+
+# make changes in the project to be available in container
+docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app  4d3968c153
+
+# Alternative of above
+docker-compose up
+
+```
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
