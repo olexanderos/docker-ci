@@ -6,4 +6,4 @@ before_install:
   - docker build -t olxanderos/docker-ci -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true olxanderos/docker-ci npm run tests
+  - docker run -e CI=true olxanderos/docker-ci npm run test
